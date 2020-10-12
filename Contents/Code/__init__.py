@@ -159,7 +159,7 @@ def Update(metadata, media, lang, force, movie):
 
 ### Agent declaration ##################################################################################################################################################
 class HamaTVAgent(Agent.TV_Shows):  # 'com.plexapp.agents.none', 'com.plexapp.agents.opensubtitles'
-  name, primary_provider, fallback_agent, contributes_to, accepts_from = 'HamaTV', True, False, None, ['com.plexapp.agents.localmedia'] 
+  name, primary_provider, fallback_agent, contributes_to, accepts_from = 'HamaTV', True, False, None, ['com.plexapp.agents.localmedia', 'com.plexapp.agents.localsubs']
   languages = [Locale.Language.English, 'fr', 'zh', 'sv', 'no', 'da', 'fi', 'nl', 'de', 'it', 'es', 'pl', 'hu', 'el', 'tr', 'ru', 'he', 'ja', 'pt', 'cs', 'ko', 'sl', 'hr']
   def search (self, results,  media, lang, manual):  Search (results,  media, lang, manual, False)
   def update (self, metadata, media, lang, force ):  Update (metadata, media, lang, force,  False)
